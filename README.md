@@ -21,6 +21,7 @@ Name     | Description
 traffic | show total_traffic_counters
 network | show network_counters
 host | show host_counters bytes (incoming|outgoing)
+asn | show asn_counters_v4 (and _v6)
 
 ## Install
 ```bash

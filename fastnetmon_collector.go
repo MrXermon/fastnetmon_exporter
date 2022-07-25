@@ -6,6 +6,7 @@ import (
 	"github.com/lwlcom/fastnetmon_exporter/collector"
 	"github.com/lwlcom/fastnetmon_exporter/host"
 	"github.com/lwlcom/fastnetmon_exporter/network"
+	"github.com/lwlcom/fastnetmon_exporter/asn"
 	"github.com/lwlcom/fastnetmon_exporter/rpc"
 	"github.com/lwlcom/fastnetmon_exporter/totaltraffic"
 	"github.com/prometheus/client_golang/prometheus"
@@ -46,6 +47,10 @@ func collectors() map[string]collector.RPCCollector {
 
 	if *hostEnabled == true {
 		m["host"] = host.NewCollector()
+	}
+
+	if *asnEnabled == true {
+		m["asn"] = asn.NewCollector()
 	}
 
 	return m

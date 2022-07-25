@@ -25,6 +25,7 @@ var (
 	totalTrafficEnabled = flag.Bool("traffic.enabled", true, "Scrape total traffic counters metrics")
 	networkEnabled      = flag.Bool("network.enabled", true, "Scrape network counters metrics")
 	hostEnabled         = flag.Bool("host.enabled", true, "Scrape host counters metrics")
+	asnEnabled			= flag.Bool("asn.enabled", true, "Scape asn counters metrics")
 )
 
 func init() {
